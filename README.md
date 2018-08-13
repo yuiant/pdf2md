@@ -179,5 +179,5 @@ code
 ## 附录
 - [markdown教程](https://www.jianshu.com/p/1e402922ee32)
 - [latex编写公式](http://mengrenzi.com/2017/06/15/Mathjax%E4%B8%8ELaTex%E5%85%AC%E5%BC%8F%E7%AE%80%E4%BB%8B/)
-- [示例](https://github.com/yuiant/pdf2md/tree/master/example/bread)
+- [demo示例](https://github.com/yuiant/pdf2md/tree/master/example/bread)
 - [template.md模板](https://github.com/yuiant/pdf2md/blob/master/template.md)
