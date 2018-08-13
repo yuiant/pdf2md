@@ -1,7 +1,7 @@
 # pdf2md项目
 
 
-## 工作内容：
+## 1 工作内容：
 1. 区块链项目白皮书pdf格式转Mardown格式
 2. 一个币对应一个目标文件夹，目标文件夹里的内容：
   - 数字币白皮书pdf原文
@@ -9,9 +9,9 @@
   - main.md：从pdf转换后的markdown格式文件。
 
 
-## 规范
+## 2. 规范
 
-### 步骤
+### 2.1 步骤
 - **Step1**:新建一个与币名同名的文件夹
 - **Step2**:把币的白皮书xxx.pdf与template.md复制到上面创建的文件夹。并将template.md重名为main.md,同时在当前目录下新建一个名为img的文件夹
 - **Step3**:根据白皮书内容，填充meta信息。一般有title（题目），author（作者），date（日期）和摘要、关键字等信息。无则留空。
@@ -21,9 +21,9 @@
 - **Step6**:处理原文出现的图，表，公式，代码
 - **Step7**:处理脚注（footnotes)
 
-### 划重点！！
+### 2.2 划重点！！
 
-#### 段落的层级结构
+#### 2.2.1 段落的层级结构
 - 表示标题那行的上一行要留出一个空白行：
     （空白行）
 
@@ -37,7 +37,7 @@
 - 同一段落的文本从pdf中复制到markdown编辑器中可能会强硬断开成几行，要重新接驳成一段。
 
 
-#### 列表
+#### 2.2.2 列表
 - 表示有序列表时候，用"序号"+“.”+"空格"的形式(注意空格是必须的，不能漏掉空格)：
   a. haha   
   b. hehe
@@ -50,7 +50,7 @@
    (2个空格)\-子列表2.2
 
 
-#### metadata
+#### 2.2.3 metadata
 metadata是一段头尾用三个减号“---”围成的文本块，在template.md里。主要放文章的一些基本信息，请根据pdf原文内容来填写，没有的就留空
 \---
 title:
@@ -61,7 +61,7 @@ abstract:
 \---
 
 
-##### 详解
+##### 2.2.3.1 详解
 
 - title:文章的题目，如果文章题目含正副标题，用"|"隔开。title的全部内容用单引号包着
 - author:文章的作者，用无序列表的方式记录。记录姓名，如有邮箱，和姓名用英文冒号:隔开
@@ -69,7 +69,7 @@ abstract:
 - keywords:关键字，通常出现论文形式的文章开头。用中括号\[\]括起，并用英文逗号“,”做分隔
 - abstract:摘要。通常出现在论文形式的文章正文前。通常为一段文本。请在abstract:后加一条竖线"|"，然后另起一行再粘贴摘要内容。**如果不是论文形式的文章，摘要也可单独成一个章节，abstract:这里的内容留空**
 
-##### 示例
+##### 2.2.3.2 示例
 \---
 title:'mytitle|my_subtitle'
 author:
@@ -84,17 +84,22 @@ This is the abstract of the article。。。
 
 
 
-#### 脚注（footnote）
+#### 2.2.4 脚注（footnote）
 - 脚注格式是[^脚注号]
 - 脚注标记和脚注解释：
 ..this is an example of footnotes[^1]-----(脚注标记)
+
 ..
+
 ..
+
 ..this is another example of footnotes\[^2\]----(脚注标记)
 
 
 --(the bottom of the article)
+
 [^1]the meaning of footnote1 ---脚注解释，统一放在文章末尾
+
 \[^2\]the meaning of footnote2
 ..
 - 因为转换成markdown后没有了页的概念，所以要将全文出现过的脚注及其解释，重新编号后全部追加到文章末尾
@@ -137,7 +142,10 @@ tbl1.png,tbl2.png tbl3.png..
 所有文章中出现的代码不采用截图形式，统一用markdown格式重新编写，格式：
 
 \```
+
+
 code
+
 
 \```
 
@@ -155,5 +163,5 @@ code
 ## 附录
 - [markdown教程](https://www.jianshu.com/p/1e402922ee32)
 - [latex编写公式](http://mengrenzi.com/2017/06/15/Mathjax%E4%B8%8ELaTex%E5%85%AC%E5%BC%8F%E7%AE%80%E4%BB%8B/)
-- [示例]()
-- [template.md模板]()
+- [示例](https://github.com/yuiant/pdf2md/tree/master/example/bread)
+- [template.md模板](https://github.com/yuiant/pdf2md/blob/master/template.md)
