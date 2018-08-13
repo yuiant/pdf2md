@@ -53,11 +53,17 @@
 #### 2.2.3 metadata
 metadata是一段头尾用三个减号“---”围成的文本块，在template.md里。主要放文章的一些基本信息，请根据pdf原文内容来填写，没有的就留空
 \---
+
 title:
+
 author:
+
 date:
+
 keywords:
+
 abstract:
+
 \---
 
 
