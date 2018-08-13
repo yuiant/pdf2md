@@ -77,16 +77,25 @@ abstract:
 - abstract:摘要。通常出现在论文形式的文章正文前。通常为一段文本。请在abstract:后加一条竖线"|"，然后另起一行再粘贴摘要内容。**如果不是论文形式的文章，摘要也可单独成一个章节，abstract:这里的内容留空**
 
 ##### 2.2.3.2 示例
+
 \---
+
 title:'mytitle|my_subtitle'
+
 author:
+
 \- author1:author1@gmail.com
+
 \- author2:author2@gmail.com
 
 date:'2018-11-11'
+
 keywords:[test,example,work]
+
 abstract:|
+
 This is the abstract of the article。。。
+
 \---
 
 
