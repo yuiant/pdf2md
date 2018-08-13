@@ -49,27 +49,31 @@
 - 列表里可以包含子列表，通过缩进的方式实现。其中缩进统一采用两个空格:
 
 > \- 列表1
+
 > \- 列表2
+
 >(2个空格)\-子列表2.1 
+
 >(2个空格)\-子列表2.2
+
 
 
 #### 2.2.3 metadata
 metadata是一段头尾用三个减号“---”围成的文本块，在template.md里。主要放文章的一些基本信息，请根据pdf原文内容来填写，没有的就留空
 
-\---
+>\---
 
-title:
+>title:
 
-author:
+>author:
 
-date:
+>date:
 
-keywords:
+>keywords:
 
-abstract:
+>abstract:
 
-\---
+>\---
 
 
 ##### 2.2.3.1 详解
@@ -82,46 +86,46 @@ abstract:
 
 ##### 2.2.3.2 示例
 
-\---
+>\---
 
-title:'mytitle|my_subtitle'
+>title:'mytitle|my_subtitle'
 
-author:
+>author:
 
-\- author1:author1@gmail.com
+>\- author1:author1@gmail.com
 
-\- author2:author2@gmail.com
+>\- author2:author2@gmail.com
 
-date:'2018-11-11'
+>date:'2018-11-11'
 
-keywords:[test,example,work]
+>keywords:[test,example,work]
 
-abstract:|
+>abstract:|
 
-This is the abstract of the article。。。
+>This is the abstract of the article。。。
 
-\---
+>\---
 
 
 
 #### 2.2.4 脚注（footnote）
 - 脚注格式是[^脚注号]
 - 脚注标记和脚注解释：
-..this is an example of footnotes[^1]-----(脚注标记)
+>..this is an example of footnotes[^1]-----(脚注标记)
 
-..
+>..
 
-..
+>..
 
-..this is another example of footnotes\[^2\]----(脚注标记)
+>..this is another example of footnotes\[^2\]----(脚注标记)
 
+>--(the bottom of the article)
 
---(the bottom of the article)
+>[^1]the meaning of footnote1 ---脚注解释，统一放在文章末尾
 
-[^1]the meaning of footnote1 ---脚注解释，统一放在文章末尾
+>\[^2\]the meaning of footnote2
 
-\[^2\]the meaning of footnote2
-..
+>..
 - 因为转换成markdown后没有了页的概念，所以要将全文出现过的脚注及其解释，重新编号后全部追加到文章末尾
 
 #### 图表公式代码
@@ -131,14 +135,17 @@ pdf出现过的图表需要重新截图到本地。所有截图放在币名文�
 fig1.png,fig2.png等等。
 - 在markdown里引用本地图片,绑定链接文字，并标记图片说明:
 示例：
-看看下面Figure1,是POW的架构图
-[这里是具体图片]
-Figure1:Pow架构图
+>看看下面Figure1,是POW的架构图
+
+>[这里是具体图片]
+
+>Figure1:Pow架构图
 
 
 如上，第一行的Figure1是图片的链接文字，最后一行是图片说明。写成markdown：
-看看下面\[Figure1\]\(#fig1\),是POW的架构图
-\![Figure1:[]{#fig1}POW架构图]\(img/fig1.png\)
+>看看下面\[Figure1\]\(#fig1\),是POW的架构图
+
+>\![Figure1:[]{#fig1}POW架构图]\(img/fig1.png\)
 
 链接文字是点中后能定位到图片的位置，用中括号括住，后跟用小括号括住的图片id(#fig1是图片id,这个id是你自己随便起的，但一定以#开头，系统才知道它是个id)。格式：\[链接文字\]\(#fig_id\)
 
@@ -161,13 +168,11 @@ tbl1.png,tbl2.png tbl3.png..
 ##### 代码
 所有文章中出现的代码不采用截图形式，统一用markdown格式重新编写，格式：
 
-\```
+>\```
 
+> code
 
-code
-
-
-\```
+>\```
 
 头尾用三个\`包着代码块
 
