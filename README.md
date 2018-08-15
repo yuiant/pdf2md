@@ -177,9 +177,9 @@ code
 ..  
 ..  
 勾股定理：（以下为latex公式）  
-$$
-a^2+b^2=c^2
-$$
+$$  
+a^2+b^2=c^2  
+$$  
 
 ## 3. 附录
 - [markdown教程](https://www.jianshu.com/p/1e402922ee32)
