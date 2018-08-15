@@ -31,9 +31,9 @@
 
 #### 2.2.2 段落的层级结构
 - 表示标题那行的上一行要留出一个空白行：
-  >(空白行）
-\# 一级标题
-(空白行)
+  >(空白行)  
+  \# 一级标题  
+(空白行)  
 \#\#  二级标题
 
 - 标题统一用\#+空格来表示。\#号后面一定要跟空格。不然程序解析不了。一级标题1个\#号，二级标题2个\#号。。。
@@ -51,23 +51,23 @@ b. hehe
 - 表示无序列表时，统一用“-”+"空格"表示。其中“-”是减号
 - 列表里可以包含子列表，通过缩进的方式实现。其中缩进统一采用两个空格:
 
-  >\- 列表1
- \- 列表2
-(2个空格)\-子列表2.1 
-(2个空格)\-子列表2.2
+  >\- 列表1   
+ \- 列表2   
+(2个空格)\-子列表2.1   
+(2个空格)\-子列表2.2  
 
 
 - 同一列表里的多段文字，开头要对齐。
 
 #### 2.2.4 metadata
 metadata是一段头尾用三个减号“---”围成的文本块，在template.md里。主要放文章的一些基本信息，请根据pdf原文内容来填写，没有的就留空
->\---
-title:
-author:
-date:
-keywords:
-abstract:
-\---
+>\---  
+title:  
+author:  
+date:  
+keywords:  
+abstract:  
+\---  
 
 
 ##### 2.2.4.1 详解
@@ -79,30 +79,30 @@ abstract:
 - abstract:摘要。通常出现在论文形式的文章正文前。通常为一段文本。请在abstract:后加一条竖线"|"，然后另起一行再粘贴摘要内容。**如果不是论文形式的文章，摘要也可单独成一个章节，abstract:这里的内容留空**
 
 ##### 2.2.4.2 示例
->\---
-title:'mytitle|my_subtitle'
-author:
-\- author1:author1@gmail.com
-\- author2:author2@gmail.com
-date:'2018-11-11'
-keywords:[test,example,work]
-abstract:|
-This is the abstract of the article。。。
-\---
+>\---  
+title:'mytitle|my_subtitle'  
+author:  
+\- author1:author1@gmail.com  
+\- author2:author2@gmail.com  
+date:'2018-11-11'  
+keywords:[test,example,work]  
+abstract:|  
+This is the abstract of the article。。。  
+\---  
 
 
 
 #### 2.2.5 脚注（footnote）
 - 脚注格式是[^脚注号]
 - 脚注标记和脚注解释：
- >..this is an example of footnotes[^1]-----(脚注标记)
-..
-..
+ >..this is an example of footnotes[^1]-----(脚注标记)  
+..  
+..  
 ..this is another example of footnotes\[^2\]----(脚注标记)
---(the bottom of the article)
-[^1]: the meaning of footnote1 ---脚注解释，冒号后记得跟一个空格，脚注解析统一放在文章末尾
-\[^2 \]: the meaning of footnote2
-..
+--(the bottom of the article)  
+[^1]: the meaning of footnote1 ---脚注解释，冒号后记得跟一个空格，脚注解析统一放在文章末尾  
+\[^2 \]: the meaning of footnote2  
+..  
 
 - 因为转换成markdown后没有了页的概念，所以要将全文出现过的脚注及其解释，重新编号后全部追加到文章末尾
 
@@ -114,13 +114,13 @@ pdf出现过的图表需要重新截图到本地。所有截图放在币名文�
 fig1.png,fig2.png等等。
 - 在markdown里引用本地图片,绑定链接文字，并标记图片说明:
 示例：
->看看下面Figure1,是POW的架构图
-[这里是具体图片]
-Figure1:Pow架构图
+>看看下面Figure1,是POW的架构图  
+[这里是具体图片]  
+Figure1:Pow架构图  
 
   如上，第一行的Figure1是图片的链接文字，最后一行是图片说明。写成markdown：
->看看下面\[Figure1\]\(#fig1\),是POW的架构图
-\![Figure1:[]{#fig1}POW架构图]\(img/fig1.png\)
+>看看下面\[Figure1\]\(#fig1\),是POW的架构图  
+\![Figure1:[]{#fig1}POW架构图]\(img/fig1.png\)  
 
   链接文字是点中后能定位到图片的位置，用中括号括住，后跟用小括号括住的图片id(#fig1是图片id,这个id是你自己随便起的，但一定以#开头，系统才知道它是个id)。格式：\[链接文字\]\(#fig_id\)
 
@@ -140,22 +140,22 @@ Figure1:Pow架构图
 ##### 2.2.6.4 代码
 所有文章中出现的代码不采用截图形式，统一用markdown格式重新编写，格式：
 
->\```
-code
-\```
+>\```  
+code  
+\```  
 
 头尾用三个\`包着代码块
 
 #### 2.2.7 文献引用
 文章中出现过的引用文献表示成[号码]。并在Reference章节以列表形式列出。
->..
-在Pat的在2018年的著作[1]提到，学写Markdown有助于新陈代谢
-..
-..
-..
-\# Reference
-\- [1]Pat,2018,《Markdown工程师的毁灭之路》
-
+>..  
+在Pat的在2018年的著作[1]提到，学写Markdown有助于新陈代谢  
+..  
+..  
+..  
+\# Reference  
+\- [1]Pat,2018,《Markdown工程师的毁灭之路》  
+  
 **注意，一般引用文献会以[n]显示,脚注会显示成上下标。但也有少量例外的情况。请根据原文判断一下哪个是脚注哪个是下标**
 
 #### 2.2.8 其他：
