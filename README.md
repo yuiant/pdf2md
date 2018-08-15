@@ -121,9 +121,9 @@ metadata是一段头尾用三个减号“---”围成的文本块，在template.
 
 >--(the bottom of the article)
 
->[^1]the meaning of footnote1 ---脚注解释，统一放在文章末尾
+>[^1]: the meaning of footnote1 ---脚注解释，冒号后记得跟一个空格，统一放在文章末尾
 
->\[^2\]the meaning of footnote2
+>\[^2 \]: the meaning of footnote2
 
 >..
 - 因为转换成markdown后没有了页的概念，所以要将全文出现过的脚注及其解释，重新编号后全部追加到文章末尾
