@@ -95,7 +95,7 @@ This is the abstract of the article。。。
 #### 2.2.5 脚注（footnote）
 - 脚注格式是[^脚注号]
 - 脚注标记和脚注解释：
- >..this is an example of footnotes[^1]-----(脚注标记)  
+  >..this is an example of footnotes[^1]-----(脚注标记)  
 ..  
 ..  
 ..this is another example of footnotes\[^2\]----(脚注标记)
@@ -162,8 +162,8 @@ code
 - 字体的样式不用处理，正常字体即可。不用还原原文中的加粗，下划线，斜体等
 - 原文的目录不需要在markdown里出现，删掉。
 - 页眉页脚页码，删掉。（注意页脚不是脚注）
-- 美元符号"\$"在正文中（通常表示钱的时候）要前面加“\”。否则会与latex公式的标记符号冲突。
-  源码：
+- 美元符号"\$"在正文中（通常表示钱的时候）要前面加“\”。否则会与latex公式的标记符号冲突。  
+  示例：
   >Pat的著作卖了\\\$100一本  
 ..  
 ..  
